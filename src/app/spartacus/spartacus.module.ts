@@ -10,6 +10,6 @@ import { SpartacusFeaturesModule } from './spartacus-features.module';
     SpartacusConfigurationModule,
     BaseStorefrontModule,
   ],
-  exports: [BaseStorefrontModule],
+  exports: [BaseStorefrontModule, SpartacusFeaturesModule],
 })
 export class SpartacusModule {}

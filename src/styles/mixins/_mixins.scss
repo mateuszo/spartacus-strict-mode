@@ -1,0 +1,13 @@
+@mixin on-hover {
+  .on-hover {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    z-index: 1;
+  }
+  &:hover .on-hover {
+    visibility: visible;
+    opacity: 1;
+  }
+}

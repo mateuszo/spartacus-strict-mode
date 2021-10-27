@@ -62,6 +62,11 @@ import {
   WishListModule,
 } from '@spartacus/storefront';
 import { CheckoutFeatureModule } from './features/checkout/checkout-feature.module';
+import { MyBannerModule } from './features/my-banner/my-banner.module';
+import { MyLoginModule } from './features/my-login/my-login.module';
+import { MyProductCartQuantityModule } from './features/my-product-cart-quantity/my-product-cart-quantity.module';
+import { MyStorefrontModule } from './features/my-storefront/my-storefront.module';
+import { RecentlyViewedModule } from './features/recently-viewed/recently-viewed.module';
 import { UserFeatureModule } from './features/user/user-feature.module';
 
 @NgModule({
@@ -140,6 +145,14 @@ import { UserFeatureModule } from './features/user/user-feature.module';
     ExternalRoutesModule.forRoot(),
     UserFeatureModule,
     CheckoutFeatureModule,
+
+    // Custom modules
+    MyBannerModule,
+    RecentlyViewedModule,
+    MyProductCartQuantityModule,
+    MyLoginModule,
+    MyStorefrontModule,
   ],
+  exports: [MyStorefrontModule],
 })
 export class SpartacusFeaturesModule {}

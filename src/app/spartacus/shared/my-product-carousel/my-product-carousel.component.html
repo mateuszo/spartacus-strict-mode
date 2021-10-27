@@ -1,0 +1,24 @@
+<div class="container">
+  <!-- re-use built-in Spartacus component -->
+  <cx-carousel
+    [items]="products"
+    [title]="title"
+    [template]="carouselItem"
+    itemWidth="200px"
+  >
+  </cx-carousel>
+</div>
+
+<!-- Define a template for each carousel slide  -->
+<ng-template #carouselItem let-item="item">
+  <a tabindex="0" [routerLink]="{ cxRoute: 'product', params: item } | cxUrl">
+    <cx-media
+      *ngIf="item.images?.PRIMARY"
+      [container]="item.images.PRIMARY"
+      format="product"
+    >
+    </cx-media>
+    <h4>{{ item.name }}</h4>
+    <div class="price">{{ item.price?.formattedValue }}</div>
+  </a>
+</ng-template>

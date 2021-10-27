@@ -1,0 +1,9 @@
+@import "/src/styles/mixins/mixins";
+
+:host {
+  @include on-hover;
+}
+
+img {
+  width: 28px;
+}
