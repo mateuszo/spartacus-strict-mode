@@ -1,12 +1,12 @@
 <ng-container *ngIf="user$ | async as user; else login">
   <div class="cx-login-greet">
-    <cx-icon [type]="userIcon"></cx-icon>
+    <cx-icon [type]="'USER'"></cx-icon>
   </div>
   <cx-page-slot class="on-hover" position="HeaderLinks"></cx-page-slot>
 </ng-container>
 
 <ng-template #login>
   <a role="link" [routerLink]="{ cxRoute: 'login' } | cxUrl">
-    <cx-icon [type]="$any('USER')"></cx-icon>
+    <cx-icon [type]="'USER'"></cx-icon>
   </a>
 </ng-template>

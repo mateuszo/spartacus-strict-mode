@@ -15,15 +15,12 @@ export class RecentlyViewedService implements OnDestroy {
     return this._viewedProducts$.asObservable();
   }
 
-  private subscription: Subscription | undefined;
+  private subscription: Subscription;
 
   constructor(private currentProduct: CurrentProductService) {}
 
   ngOnDestroy(): void {
-    // TODO: get rid of undef check
-    if (this.subscription) {
-      this.subscription.unsubscribe();
-    }
+    this.subscription.unsubscribe();
   }
 
   trackViewedProducts(): void {

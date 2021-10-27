@@ -5,13 +5,6 @@ import { CmsConfig, ConfigModule, UrlModule } from '@spartacus/core';
 import { IconConfig, IconModule, PageSlotModule } from '@spartacus/storefront';
 import { MyLoginComponent } from './my-login.component';
 
-// TODO: This should work :(
-declare module '@spartacus/core' {
-  const enum ICON_TYPE {
-    USER = 'USER',
-  }
-}
-
 @NgModule({
   declarations: [MyLoginComponent],
   imports: [

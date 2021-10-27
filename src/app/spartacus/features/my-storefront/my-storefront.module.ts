@@ -10,7 +10,6 @@ import {
   PageSlotModule,
   SkipLinkModule,
 } from '@spartacus/storefront';
-import { MyFocusDirective } from './my-focus.directive';
 import { MyStorefrontComponent } from './my-storefront.component';
 
 @NgModule({
@@ -25,7 +24,7 @@ import { MyStorefrontComponent } from './my-storefront.component';
     KeyboardFocusModule,
     SkipLinkModule,
   ],
-  declarations: [MyStorefrontComponent, MyFocusDirective],
+  declarations: [MyStorefrontComponent],
   exports: [MyStorefrontComponent],
 })
 export class MyStorefrontModule {}
